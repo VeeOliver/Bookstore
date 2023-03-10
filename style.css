@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #dfe1e0;
+  background-color: rgb(223, 225, 224);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,12 +15,24 @@
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+}
+
+h2 {
+  margin-top: 50px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.newKeyword {
+  color: #897830;
 }
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #dfe1e0;
+  background-color: #f8faf8;
+  ;
 }
 
 .logo {
@@ -40,13 +52,45 @@ body {
 }
 
 .bookThumbnail {
-  margin: 20px, 20px, 20px, 20px;
-  border-radius: 5px;
-  max-width: 300px;
-  display: inline-flexbox;
+  padding: 10px 10px 10px 10px;
+  width: 300px;
+  height: 350px;
+  margin: 20px 20px 20px 20px;
+  display: inline-block;
+  overflow-wrap: normal;
 }
 
-.thumbnail {
-  max-width: 300px;
-  max-height: 400px;
+h3 {
+  font-size: large;
+  text-align: left;
+  font-weight: bold;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+p {
+  text-align: left;
+  display: flex;
+}
+
+.thumbnailPicture {
+  display: flex;
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.bookThumbnail:hover {
+  background-color: #89793061;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #897830;
+  --bs-btn-border-color: #897830;
+  --bs-btn-hover-bg: #897830;
+  --bs-btn-hover-border-color: #897830;
+  --bs-btn-active-bg: #897830;
+  --bs-btn-active-border-color: #897830;
+  --bs-btn-disabled-color: #897830;
+  --bs-btn-disabled-border-color: #897830;
 }

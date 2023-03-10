@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Yearling, The",
-    "author": "Sergeant Brede",
+    "title": "Responsive Design with Bootstrap",
+    "author": "Wibecka Oliver",
     "description": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
-    "category": "FYM",
+    "category": "UX",
     "price": 995
   },
   {
@@ -12,7 +12,7 @@
     "title": "Silent Action",
     "author": "Dougy Roblou",
     "description": "Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
-    "category": "SAC",
+    "category": "UX",
     "price": 428
   },
   {
@@ -20,7 +20,7 @@
     "title": "Portrait of Jennie",
     "author": "Bradly Andriesse",
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-    "category": "SKF",
+    "category": "UX",
     "price": 960
   },
   {
@@ -28,7 +28,7 @@
     "title": "Guerrilla: The Taking of Patty Hearst",
     "author": "Desi Bartolomucci",
     "description": "Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-    "category": "MVA",
+    "category": "UX",
     "price": 829
   },
   {
@@ -36,15 +36,15 @@
     "title": "Ultimate Accessory,The (100% cachemire)",
     "author": "Bettye Stephen",
     "description": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
-    "category": "LPI",
+    "category": "UX",
     "price": 266
   },
   {
     "id": 6,
-    "title": "Home",
-    "author": "Maurene Heelis",
+    "title": "HTML - An Introduction",
+    "author": "Wibecka Oliver",
     "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
-    "category": "UNI",
+    "category": "HTML",
     "price": 397
   },
   {
@@ -52,7 +52,7 @@
     "title": "Disney Princess Collection: Jasmine's Enchanted Tales: Jasmine's Wish",
     "author": "Shandeigh Andrin",
     "description": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-    "category": "ALN",
+    "category": "HTML",
     "price": 212
   },
   {
@@ -60,7 +60,7 @@
     "title": "That Obscure Object of Desire (Cet obscur objet du désir)",
     "author": "Rosita Gurnee",
     "description": "Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
-    "category": "ORB",
+    "category": "HTML",
     "price": 1445
   },
   {
@@ -68,7 +68,7 @@
     "title": "I Could Never Be Your Woman",
     "author": "Meggi Dunmore",
     "description": "Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
-    "category": "KGX",
+    "category": "HTML",
     "price": 408
   },
   {
@@ -76,15 +76,15 @@
     "title": "And Soon the Darkness",
     "author": "Luciana Tizzard",
     "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
-    "category": "KAP",
+    "category": "HTML",
     "price": 884
   },
   {
     "id": 11,
-    "title": "Interview with the Vampire: The Vampire Chronicles",
-    "author": "Conrad Itzcak",
+    "title": "CSS - An Introduction",
+    "author": "Wibecka Oliver",
     "description": "In quis justo.",
-    "category": "YHP",
+    "category": "CSS",
     "price": 1389
   },
   {
@@ -92,7 +92,7 @@
     "title": "Concursante",
     "author": "Charmaine Raoult",
     "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
-    "category": "YLJ",
+    "category": "CSS",
     "price": 422
   },
   {
@@ -100,7 +100,7 @@
     "title": "Bionicle 3: Web of Shadows",
     "author": "Arly Watsam",
     "description": "Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
-    "category": "TIJ",
+    "category": "CSS",
     "price": 1349
   },
   {
@@ -108,7 +108,7 @@
     "title": "Cutting Edge: Going for the Gold, The",
     "author": "Rodina Usher",
     "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "category": "CCY",
+    "category": "CSS",
     "price": 1142
   },
   {
@@ -116,15 +116,15 @@
     "title": "Fathers' Day",
     "author": "Roanna Commusso",
     "description": "Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "category": "HWN",
+    "category": "CSS",
     "price": 706
   },
   {
     "id": 16,
-    "title": "Bad Timing: A Sensual Obsession",
-    "author": "Aubrie Roark",
+    "title": "JavaScript - An Introduction",
+    "author": "Wibecka Oliver",
     "description": "Pellentesque ultrices mattis odio.",
-    "category": "HSP",
+    "category": "JavaScript",
     "price": 864
   },
   {
@@ -132,7 +132,7 @@
     "title": "Awakenings",
     "author": "Taddeo Whild",
     "description": "Mauris ullamcorper purus sit amet nulla.",
-    "category": "KDC",
+    "category": "JavaScript",
     "price": 1201
   },
   {
@@ -140,7 +140,7 @@
     "title": "Best Defense",
     "author": "Marjorie Buffin",
     "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor.",
-    "category": "PYJ",
+    "category": "JavaScript",
     "price": 378
   },
   {
@@ -148,7 +148,7 @@
     "title": "Maria Full of Grace (Maria, Llena eres de gracia)",
     "author": "Jeannette Ganders",
     "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.",
-    "category": "BUQ",
+    "category": "JavaScript",
     "price": 683
   },
   {
@@ -156,7 +156,7 @@
     "title": "Jimi Hendrix",
     "author": "Callida Jumeau",
     "description": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
-    "category": "SIP",
+    "category": "JavaScript",
     "price": 1376
   }
 ]

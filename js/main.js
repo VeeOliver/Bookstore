@@ -1,5 +1,7 @@
 import '../style.css'
 
+let books;
+
 async function getJSON(url) {
   let rawData = await fetch(url)
   let data = await rawData.json()
@@ -7,21 +9,21 @@ async function getJSON(url) {
 }
 
 async function start() {
-  let books = await getJSON('./json/books.json')
-  let html = '';
+  books = await getJSON('./json/books.json')
+  displayBooks()
+}
+
+function displayBooks() {
+  let html = '<h2>Library</h2>';
   for (let book of books) {
     html += `
       <div class="bookThumbnail">
-        <img src="/imgs/bookPlaceholderImage.jpg" class="thumbnail">
+        <img src="/imgs/bookPlaceholderImage.jpg" class="thumbnailPicture">
           <h3>${book.title}</h3>
         <p>Author:${book.author}</p>
-     <p>Price:${book.price}</p>
+        <p>Price:${book.price}</p>
+     </div>
     `;
-    /*  for (let key in book) {
-       let value = book[key];
-       html += `<p><span>${key}:</span> ${value}</p>`
-     }
-     html += '</div>'; // end the person div */
   }
   document.querySelector('main').innerHTML = html;
 }

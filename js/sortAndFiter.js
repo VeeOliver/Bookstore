@@ -2,6 +2,7 @@ import { Button } from 'bootstrap';
 import '../style.css'
 import { getJSON } from './utils/getJSON';
 import { showFeaturedBooks } from './featuredBooks';
+import { displaySingleBook } from './singleBook';
 
 export async function start() {
   books = await getJSON('./json/books.json');
@@ -104,7 +105,7 @@ function addFilters() {
   );
 }
 
-async function displayBooks() {
+function displayBooks() {
   // filter according to category and call displayBooks
   let filteredBooks = books.filter(
     ({ category }) => chosenCategoryFilter === 'all'
@@ -132,9 +133,10 @@ async function displayBooks() {
   document.querySelector('.bookList').innerHTML = htmlArray.join('')
   //add event listener 
 
-  await document.querySelectorAll(`.infoBtn`).forEach(btn => {
+  document.querySelectorAll(`.infoBtn`).forEach(btn => {
     btn.addEventListener('click', e => {
-      console.log('I have been clicked!', e.target.getAttribute('id'))
+      displaySingleBook(books, e.target.getAttribute('id'))
+      //console.log('I have been clicked!', e.target.getAttribute('id'))
     })
   })
 }

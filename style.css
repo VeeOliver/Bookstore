@@ -100,3 +100,16 @@ p {
     grid-template-columns: repeat(1, 300px);
   }
 }
+
+.aboutPage {
+  padding: 50px 50px 50px 50px;
+}
+
+.largePicture {
+  height: 700px;
+  width: 600px;
+}
+
+.singleDisplay {
+  display: inline;
+}

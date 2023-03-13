@@ -1,6 +1,6 @@
+import { Button } from 'bootstrap';
 import '../style.css'
 import { getJSON } from './utils/getJSON';
-import { displaySingleView } from './functionality';
 
 export async function start() {
   books = await getJSON('./json/books.json');
@@ -17,8 +17,7 @@ export async function start() {
 let books,
   chosenCategoryFilter = 'all',
   chosenSortOption,
-  categories = [],
-  chosenBookTitle;
+  categories = []
 
 function sortByAuthorAtoZ(books) {
   books.sort(({ author: aAuthor }, { author: bAuthor }) =>
@@ -103,7 +102,7 @@ function addFilters() {
   );
 }
 
-function displayBooks() {
+async function displayBooks() {
   // filter according to category and call displayBooks
   let filteredBooks = books.filter(
     ({ category }) => chosenCategoryFilter === 'all'
@@ -117,21 +116,23 @@ function displayBooks() {
   if (chosenSortOption === 'Title (A-Z)') { sortByTitleAtoZ(filteredBooks); }
   if (chosenSortOption === 'Title (Z-A)') { sortByTitleZtoA(filteredBooks); }
   let htmlArray = filteredBooks.map(({
-    title, author, price
+    title, author, price, id
   }) => `
-    <div class="bookThumbnail" id="individualBook">
+    <div class="bookThumbnail" id=${id}>
     <img src="/imgs/bookPlaceholderImage.jpg" class="thumbnailPicture">
       <h3>${title}</h3>
       <p><span>Author: </span>${author}</p>
        <p><span>Price: </span>${price} SEK</p>
-       <button type="button" class="infoBtn id="infoBtn">More Info</button>
-       <button type="button" id="cartBtn">Add to Cart</button>
+       <button type="button" class="infoBtn" id=${id}>More Info</button>
+       <button type="button" class="cartBtn" id=${id}">Add to Cart</button>
     </div>
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('')
   //add event listener 
 
-  document.querySelector('.infoBtn').addEventListener('click', e => {
-    console.log('I have been clicked!')
+  await document.querySelectorAll(`.infoBtn`).forEach(btn => {
+    btn.addEventListener('click', e => {
+      console.log('I have been clicked!', e.target.getAttribute('id'))
+    })
   })
 }

@@ -1,9 +1,11 @@
 import { Button } from 'bootstrap';
 import '../style.css'
 import { getJSON } from './utils/getJSON';
+import { showFeaturedBooks } from './featuredBooks';
 
 export async function start() {
   books = await getJSON('./json/books.json');
+  showFeaturedBooks();
   getCategories();
   addFilters();
   addSortingOptions();

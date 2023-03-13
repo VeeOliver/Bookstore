@@ -1,6 +1,7 @@
 
 import '../style.css'
-function featuredBooks() {
+
+export function showFeaturedBooks() {
   document.querySelector('.featuredBooks').innerHTML =
     `<h1><span class="newKeyword">New</span> from the Vault: The Beginners Collection</h1>
   <div class="carousel-container">

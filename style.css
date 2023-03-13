@@ -14,24 +14,8 @@
   -webkit-text-size-adjust: 100%;
 }
 
-h1 {
-  text-align: left;
-  padding: 20px 20px 20px 20px;
-}
-
-h2 {
-  margin-top: 50px;
-  padding-left: 20px;
-  font-weight: bold;
-}
-
-label {
-  padding-left: 20px;
-  padding-bottom: 10px;
-}
-
-.newKeyword {
-  color: #897830;
+.sticky-top {
+  background-color: #f8faf8;
 }
 
 body {
@@ -40,30 +24,15 @@ body {
   ;
 }
 
-.logo {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: xx-large;
-}
-
-.logoImage {
-  max-width: 100px;
-
-}
-
-.carousel-container {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .bookThumbnail {
   cursor: pointer;
   padding: 10px 10px 10px 10px;
   width: 300px;
-  height: 350px;
+  height: 500px;
   margin: 20px 20px 20px 20px;
-  display: inline-block;
   overflow-wrap: normal;
+  -ms-grid-row-align: center;
 }
 
 h3 {
@@ -100,4 +69,34 @@ p {
   --bs-btn-active-border-color: #897830;
   --bs-btn-disabled-color: #897830;
   --bs-btn-disabled-border-color: #897830;
+}
+
+.carousel-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newKeyword {
+  color: #897830;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 20px;
+  justify-content: center;
+
+}
+
+@media (max-width: 1000px) {
+  .bookList {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 500px) {
+  .bookList {
+    grid-template-columns: repeat(1, 300px);
+  }
 }

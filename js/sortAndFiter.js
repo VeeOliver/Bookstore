@@ -7,8 +7,10 @@ export async function start() {
   getCategories();
   addFilters();
   addSortingOptions();
-  sortByTitle(books);
-  sortByAuthor(books);
+  sortByTitleAtoZ(books);
+  sortByTitleZtoA(books)
+  sortByAuthorAtoZ(books);
+  sortByAuthorZtoA(books);
   displayBooks();
 }
 
@@ -18,19 +20,34 @@ let books,
   categories = [],
   chosenBookTitle;
 
-function sortByAuthor(books) {
-  books.sort(({ title: aTitle }, { title: bTitle }) =>
-    aTitle > bTitle ? 1 : -1);
+function sortByAuthorAtoZ(books) {
+  books.sort(({ author: aAuthor }, { author: bAuthor }) =>
+    aAuthor > bAuthor ? 1 : -1);
 }
 
-function sortByTitle(books) {
+function sortByAuthorZtoA(books) {
+  books.sort(({ author: aAuthor }, { author: bAuthor }) =>
+    aAuthor < bAuthor ? 1 : -1);
+}
+
+function sortByTitleAtoZ(books) {
   books.sort(({ title: aAuthor }, { title: bAuthor }) =>
     aAuthor > bAuthor ? 1 : -1);
 }
 
-function sortByPrice(books) {
+function sortByTitleZtoA(books) {
+  books.sort(({ title: aAuthor }, { title: bAuthor }) =>
+    aAuthor < bAuthor ? 1 : -1);
+}
+
+function sortByPriceAsc(books) {
   books.sort(({ price: aPrice }, { price: bPrice }) =>
     aPrice > bPrice ? 1 : -1);
+}
+
+function sortByPriceDes(books) {
+  books.sort(({ price: aPrice }, { price: bPrice }) =>
+    aPrice < bPrice ? 1 : -1);
 }
 
 function addSortingOptions() {
@@ -38,10 +55,13 @@ function addSortingOptions() {
   document.querySelector('.sortingOptions').innerHTML = `
     <label><span>Sort by:</span>
       <select class="sortOption">
-        <option>--Unsorted--</option> 
-        <option>Author</option>
-        <option>Price</option>
-        <option>Title</option>
+      <option>--choose sort--</option>
+        <option>Title (A-Z)</option>
+        <option>Title (Z-A)</option>
+        <option>Author (A-Z)</option>
+        <option>Author (Z-A)</option>
+        <option>Price (low-high)</option>
+        <option>Price (high-low)</option>
       </select>
     </label>
   `;
@@ -90,9 +110,12 @@ function displayBooks() {
       || chosenCategoryFilter === category
   );
   if (chosenSortOption === '--Unsorted--') { filteredBooks = books }
-  if (chosenSortOption === 'Author') { sortByAuthor(filteredBooks); }
-  if (chosenSortOption === 'Price') { sortByPrice(filteredBooks); }
-  if (chosenSortOption === 'Title') { sortByTitle(filteredBooks); }
+  if (chosenSortOption === 'Author (A-Z)') { sortByAuthorAtoZ(filteredBooks); }
+  if (chosenSortOption === 'Author (Z-A)') { sortByAuthorZtoA(filteredBooks); }
+  if (chosenSortOption === 'Price (low-high)') { sortByPriceAsc(filteredBooks); }
+  if (chosenSortOption === 'Price (high-low)') { sortByPriceDes(filteredBooks); }
+  if (chosenSortOption === 'Title (A-Z)') { sortByTitleAtoZ(filteredBooks); }
+  if (chosenSortOption === 'Title (Z-A)') { sortByTitleZtoA(filteredBooks); }
   let htmlArray = filteredBooks.map(({
     title, author, price
   }) => `
@@ -107,6 +130,7 @@ function displayBooks() {
   `);
   document.querySelector('.bookList').innerHTML = htmlArray.join('')
   //add event listener 
+
   document.querySelector('.infoBtn').addEventListener('click', e => {
     console.log('I have been clicked!')
   })

@@ -2,9 +2,9 @@ import '../style.css'
 import { start } from './sortAndFiter'
 
 export function displaySingleBook(books, id) {
-  console.log(id)
-  let currentBook = books.filter(book => book.id === parseInt(id))
-  let singleBook = currentBook[0]
+  let singleBook = getBookInfo(books, id)
+  /* let currentBook = books.filter(book => book.id === parseInt(id))
+  let singleBook = currentBook[0] */
   let singleBookHtml =
     `<div class="row">
     <div class="col">
@@ -25,6 +25,11 @@ export function displaySingleBook(books, id) {
   })
 }
 
+export function getBookInfo(books, id) {
+  let currentBook = books.filter(book => book.id === parseInt(id))
+  let singleBook = currentBook[0]
+  return singleBook
+}
 
 
 function reloadLibrary() {

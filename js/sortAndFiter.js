@@ -3,6 +3,7 @@ import '../style.css'
 import { getJSON } from './utils/getJSON';
 import { showFeaturedBooks } from './featuredBooks';
 import { displaySingleBook } from './singleBook';
+import { addToCart, showCartItems } from './shoppingCart';
 
 export async function start() {
   books = await getJSON('./json/books.json');
@@ -15,6 +16,7 @@ export async function start() {
   sortByAuthorAtoZ(books);
   sortByAuthorZtoA(books);
   displayBooks();
+  checkCart();
 }
 
 let books,
@@ -138,5 +140,18 @@ function displayBooks() {
       displaySingleBook(books, e.target.getAttribute('id'))
       //console.log('I have been clicked!', e.target.getAttribute('id'))
     })
+  })
+
+  document.querySelectorAll(`.cartBtn`).forEach(btn => {
+    btn.addEventListener('click', e => {
+      addToCart(books, e.target.getAttribute('id'))
+      //console.log('I have been clicked!', e.target.getAttribute('id'))
+    })
+  })
+}
+
+function checkCart() {
+  document.getElementById('bagIcon').addEventListener('click', e => {
+    showCartItems()
   })
 }

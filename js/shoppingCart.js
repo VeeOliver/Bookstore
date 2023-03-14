@@ -10,36 +10,20 @@ export function addToCart(books, id) {
   document.getElementById('itemCount').innerHTML = `
   <span id="itemCount">${cart.length}</span>`
   console.log(cart)
+  calculateTotals()
 }
 
+function calculateTotals() {
+  let total = 0
+  cart.forEach(item => {
+    total += item.price
+  });
 
-export function showCartItems() {
-  let cartItems
-  if (cart.length === 0) {
-    cartItems = `
-        <p><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Link with href
-        </a>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <p> Your Cart is Empty </p>
-      </div>`
-  } else
-    cartItems = cart.map(({ title, author, price }) => {
-      `<p>
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      Link with href
-    </a>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-     <h3>${title}</h3>
-      <h3>${author}</h3>
-      <h3>${price}</h3>
-  </div>`
-    })
-  document.getElementById('bagIcon').innerHTML = cartItems
+  console.log(total)
+}
+
+function showCartItems() {
+
 }
 
 function bookInCart() {

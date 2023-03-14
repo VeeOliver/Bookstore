@@ -3,7 +3,7 @@ import '../style.css'
 import { getJSON } from './utils/getJSON';
 import { showFeaturedBooks } from './featuredBooks';
 import { displaySingleBook } from './singleBook';
-import { addToCart, showCartItems } from './shoppingCart';
+import { addToCart } from './shoppingCart';
 
 export async function start() {
   books = await getJSON('./json/books.json');
@@ -16,7 +16,6 @@ export async function start() {
   sortByAuthorAtoZ(books);
   sortByAuthorZtoA(books);
   displayBooks();
-  checkCart();
 }
 
 let books,
@@ -150,8 +149,3 @@ function displayBooks() {
   })
 }
 
-function checkCart() {
-  document.getElementById('bagIcon').addEventListener('click', e => {
-    showCartItems()
-  })
-}

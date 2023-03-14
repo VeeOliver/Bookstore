@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "title": "Silent Action",
+    "title": "Hands On Bootstrap",
     "author": "Dougy Roblou",
     "description": "Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
     "category": "UX",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "title": "Portrait of Jennie",
+    "title": "How Bootstrap can Improve Your Code ",
     "author": "Bradly Andriesse",
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "category": "UX",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "title": "Guerrilla: The Taking of Patty Hearst",
+    "title": "Everything You Need to Know About Bootstrap",
     "author": "Desi Bartolomucci",
     "description": "Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "category": "UX",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "title": "Ultimate Accessory,The (100% cachemire)",
+    "title": "Techniques For Maximizing Bootstrap",
     "author": "Bettye Stephen",
     "description": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
     "category": "UX",
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "title": "Disney Princess Collection: Jasmine's Enchanted Tales: Jasmine's Wish",
+    "title": "HTML Mastery: Advanced Techniques for Creating Dynamic Web Pages",
     "author": "Shandeigh Andrin",
     "description": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "category": "HTML",
@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "title": "That Obscure Object of Desire (Cet obscur objet du désir)",
+    "title": "Learning HTML: A Step-by-Step Guide to Creating Websites",
     "author": "Rosita Gurnee",
     "description": "Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
     "category": "HTML",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "title": "I Could Never Be Your Woman",
+    "title": "The History of HTML",
     "author": "Meggi Dunmore",
     "description": "Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
     "category": "HTML",
@@ -73,7 +73,7 @@
   },
   {
     "id": 10,
-    "title": "And Soon the Darkness",
+    "title": "Advanced HTML",
     "author": "Luciana Tizzard",
     "description": "Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
     "category": "HTML",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "title": "Concursante",
+    "title": "A Definitive Guide to CSS",
     "author": "Charmaine Raoult",
     "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
     "category": "CSS",
@@ -97,7 +97,7 @@
   },
   {
     "id": 13,
-    "title": "Bionicle 3: Web of Shadows",
+    "title": "CSS: Cascading Style Sheets and Their Uses",
     "author": "Arly Watsam",
     "description": "Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
     "category": "CSS",
@@ -105,7 +105,7 @@
   },
   {
     "id": 14,
-    "title": "Cutting Edge: Going for the Gold, The",
+    "title": "Design Made Easy with CSS",
     "author": "Rodina Usher",
     "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "category": "CSS",
@@ -113,7 +113,7 @@
   },
   {
     "id": 15,
-    "title": "Fathers' Day",
+    "title": "Coding, Computers and CSS",
     "author": "Roanna Commusso",
     "description": "Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "category": "CSS",
@@ -129,7 +129,7 @@
   },
   {
     "id": 17,
-    "title": "Awakenings",
+    "title": "Expert JavaScript: For Advanced Readers",
     "author": "Taddeo Whild",
     "description": "Mauris ullamcorper purus sit amet nulla.",
     "category": "JavaScript",
@@ -137,7 +137,7 @@
   },
   {
     "id": 18,
-    "title": "Best Defense",
+    "title": "Why Javascript? The Pros and Cons of JS Programming",
     "author": "Marjorie Buffin",
     "description": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor.",
     "category": "JavaScript",
@@ -145,7 +145,7 @@
   },
   {
     "id": 19,
-    "title": "Maria Full of Grace (Maria, Llena eres de gracia)",
+    "title": "Coffee Coding, How JavaScript Can Increase Your Fika Break",
     "author": "Jeannette Ganders",
     "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.",
     "category": "JavaScript",
@@ -153,7 +153,7 @@
   },
   {
     "id": 20,
-    "title": "Jimi Hendrix",
+    "title": "Security and JavaScript, A Complete Guide",
     "author": "Callida Jumeau",
     "description": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
     "category": "JavaScript",

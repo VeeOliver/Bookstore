@@ -47,15 +47,17 @@ function displayCartItems(currentRowTotal) {
     title, author, price, id
   }) => `
     <div class="bookRow" id=${id}>
-    <img src="/imgs/bookPlaceholderImage.jpg" class="thumbnailPicture">
+    <img src="/imgs/bookCovers/${id}.png" class="cartPicture">
       <h3>${title}</h3>
       <p><span>Author: </span>${author}</p>
        <p><span>Price: </span>${price} SEK</p>
     </div>
   `);
   document.getElementById('modalBodyText').innerHTML = htmlArray.join('')
-  document.getElementById('modalFooterText').innerHTML = `
-          <p><span>Total: </span>${total} SEK</p>
+  document.getElementById('modalFooterText').innerHTML =
+    `
+          <h3><span>Total: </span>${total} SEK</h3>
+          <br></br>
           <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn">Checkout</button>`
 } 

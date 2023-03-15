@@ -51,8 +51,9 @@ p {
 
 .thumbnailPicture {
   display: flex;
-  width: 200px;
-  height: 150px;
+  max-width: 60%;
+  width: auto;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -99,6 +100,7 @@ p {
   .bookList {
     grid-template-columns: repeat(1, 300px);
   }
+
 }
 
 .aboutPage {
@@ -106,8 +108,14 @@ p {
 }
 
 .largePicture {
-  height: 700px;
-  width: 600px;
+  float: left;
+  max-width: 35%;
+  max-height: 60%;
+  height: auto;
+  width: auto;
+  display: flex;
+  padding: 20px 20px 20px 20px;
+
 }
 
 .singleDisplay {
@@ -116,4 +124,42 @@ p {
 
 .modal-backdrop {
   display: none;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.cartPicture {
+  max-width: 20%;
+  height: auto;
+  width: auto;
+}
+
+.title {
+  text-align: left;
+  padding-left: 40px;
+  margin-top: 30px;
+
+
+}
+
+.description {
+  text-align: left;
+  padding-left: 40px;
+  font-size: small;
+  padding-right: 40px;
+}
+
+.col {
+  padding: 20px 20px 20px 20px;
+}
+
+.author,
+.price,
+.category {
+  text-align: left;
+  padding-left: 40px;
+
 }

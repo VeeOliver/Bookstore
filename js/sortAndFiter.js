@@ -119,11 +119,12 @@ function displayBooks() {
   if (chosenSortOption === 'Price (high-low)') { sortByPriceDes(filteredBooks); }
   if (chosenSortOption === 'Title (A-Z)') { sortByTitleAtoZ(filteredBooks); }
   if (chosenSortOption === 'Title (Z-A)') { sortByTitleZtoA(filteredBooks); }
+
   let htmlArray = filteredBooks.map(({
     title, author, price, id
   }) => `
     <div class="bookThumbnail" id=${id}>
-    <img src="/imgs/bookPlaceholderImage.jpg" class="thumbnailPicture">
+    <img src="/imgs/bookCovers/${id}.png" class="thumbnailPicture">
       <h3>${title}</h3>
       <p><span>Author: </span>${author}</p>
        <p><span>Price: </span>${price} SEK</p>
@@ -131,6 +132,7 @@ function displayBooks() {
        <button type="button" class="cartBtn" id=${id}">Add to Cart</button>
     </div>
   `);
+
   document.querySelector('.bookList').innerHTML = htmlArray.join('')
   //add event listener 
 

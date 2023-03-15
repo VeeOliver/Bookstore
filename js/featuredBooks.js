@@ -18,28 +18,28 @@ export function showFeaturedBooks() {
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="imgs/bookPlaceholderImage.jpg" class="d-block w-100" alt="...">
+          <img src="imgs/bookCovers/1.png" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>First book bootstrap</h5>
             <p>Some representative placeholder content for the first slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="imgs/bookPlaceholderImage.jpg" class="d-block w-100" alt="...">
+          <img src="imgs/bookCovers/6.png" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second book html</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="imgs/bookPlaceholderImage.jpg" class="d-block w-100" alt="...">
+          <img src="imgs/bookCovers/11.png" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Third book CSS</h5>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="imgs/bookPlaceholderImage.jpg" class="d-block w-100" alt="...">
+          <img src="imgs/bookCovers/16.png" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Fourth book JS</h5>
             <p>Some representative placeholder content for the fourth slide.</p>

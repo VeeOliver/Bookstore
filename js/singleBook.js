@@ -8,12 +8,12 @@ export function displaySingleBook(books, id) {
   let singleBookHtml =
     `<div class="row">
     <div class="col">
-      <img src="/imgs/bookPlaceholderImage.jpg" class="largePicture">
+      <img src="/imgs/bookCovers/${singleBook.id}.png" class="largePicture">
       <h3 class="title">${singleBook.title}</h3>
-      <p class="author">Author ${singleBook.author} </p>
-      <p class="description">Description ${singleBook.description}</p>
-      <p class="category">Category ${singleBook.category}</p>
-      <p class="price">Price ${singleBook.price}</p>
+      <p class="author">Author: ${singleBook.author} </p>
+      <p class="description">Description: ${singleBook.description}</p>
+      <p class="category">Category: ${singleBook.category}</p>
+      <p class="price">Price: ${singleBook.price}</p>
       <button class="cartBtn">Add to Cart</button>
        <button class="backBtn" id="backBtn">Back to Library</button>
     </div>

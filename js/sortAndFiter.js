@@ -106,6 +106,7 @@ function addFilters() {
   );
 }
 
+
 function displayBooks() {
   // filter according to category and call displayBooks
   let filteredBooks = books.filter(

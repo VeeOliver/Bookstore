@@ -1,5 +1,6 @@
 import '../style.css'
 import { start } from './sortAndFiter'
+import { addToCart } from './shoppingCart'
 
 export function displaySingleBook(books, id) {
   let singleBook = getBookInfo(books, id)
@@ -23,6 +24,13 @@ export function displaySingleBook(books, id) {
   document.querySelector('.backBtn').addEventListener('click', e => {
     reloadLibrary()
   })
+
+  document.querySelector('.cartBtn').addEventListener('click', e => {
+    addToCart(books, id)
+  })
+
+
+
 }
 
 export function getBookInfo(books, id) {

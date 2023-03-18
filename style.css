@@ -2,10 +2,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  padding-left: 40px;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(223, 225, 224);
+  color: #f8faf8;
+  background-color: #f8faf8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,6 +25,28 @@ body {
   ;
 }
 
+button {
+  background-color: #897830;
+  color: #f8faf8;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #959593;
+
+}
+
+.homeText {
+  text-align: center;
+}
+
+.aboutPage {
+  max-width: 100ch;
+}
 
 .bookThumbnail {
   cursor: pointer;
@@ -33,6 +56,8 @@ body {
   margin: 20px 20px 20px 20px;
   overflow-wrap: normal;
   -ms-grid-row-align: center;
+  overflow: hidden;
+
 }
 
 h3 {
@@ -46,7 +71,7 @@ h3 {
 p {
   text-align: left;
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .thumbnailPicture {
@@ -61,6 +86,12 @@ p {
   background-color: #89793061;
 }
 
+.thumbnailTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .btn-outline-secondary {
   --bs-btn-color: #897830;
   --bs-btn-border-color: #897830;
@@ -73,14 +104,35 @@ p {
 }
 
 .carousel-container {
-  width: 500px;
+  width: 300px;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .newKeyword {
   color: #897830;
 }
+
+.landingPage {
+  display: flex;
+}
+
+
+.library {
+  margin-top: 50px;
+}
+
+.descriptionText {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  align-items: center;
+  flex-basis: 50%;
+}
+
 
 .bookList {
   display: grid;
@@ -90,15 +142,32 @@ p {
 
 }
 
+
 @media (max-width: 1000px) {
   .bookList {
     grid-template-columns: repeat(2, 300px);
+  }
+
+  .largePicture {
+    max-width: 300px;
   }
 }
 
 @media (max-width: 500px) {
   .bookList {
     grid-template-columns: repeat(1, 300px);
+  }
+
+  .landingPage {
+    display: block;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .largePicture {
+    max-width: 200px;
   }
 
 }
@@ -108,11 +177,8 @@ p {
 }
 
 .largePicture {
-  float: left;
-  max-width: 35%;
-  max-height: 60%;
   height: auto;
-  width: auto;
+  max-width: 400px;
   display: flex;
   padding: 20px 20px 20px 20px;
 
@@ -122,27 +188,10 @@ p {
   display: inline;
 }
 
-.modal-backdrop {
-  display: none;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cartPicture {
-  max-width: 20%;
-  height: auto;
-  width: auto;
-}
-
 .title {
   text-align: left;
   padding-left: 40px;
   margin-top: 30px;
-
-
 }
 
 .description {
@@ -150,16 +199,20 @@ p {
   padding-left: 40px;
   font-size: small;
   padding-right: 40px;
+  margin-bottom: 0;
 }
 
-.col {
-  padding: 20px 20px 20px 20px;
+.row {
+  display: flex;
 }
 
-.author,
-.price,
-.category {
-  text-align: left;
-  padding-left: 40px;
 
+.bookRow {
+  display: flex;
+}
+
+.infoBtn,
+.cartBtn {
+  margin-top: 50px;
+  margin-left: 10px;
 }

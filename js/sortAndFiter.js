@@ -126,7 +126,7 @@ function displayBooks() {
   }) => `
     <div class="bookThumbnail" id=${id}>
     <img src="/imgs/bookCovers/${id}.png" class="thumbnailPicture">
-      <h3>${title}</h3>
+      <h3 class="thumbnailTitle">${title}</h3>
       <p><span>Author: </span>${author}</p>
        <p><span>Price: </span>${price} SEK</p>
        <button type="button" class="infoBtn" id=${id}>More Info</button>

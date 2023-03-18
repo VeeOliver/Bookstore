@@ -6,3 +6,5 @@ start()
 document.querySelector('#about').addEventListener('click', event => {
   loadAboutPage()
 })
+
+

@@ -8,8 +8,8 @@ export function displaySingleBook(books, id) {
   let singleBook = currentBook[0] */
   let singleBookHtml =
     `<div class="row">
-    <div class="col">
       <img src="/imgs/bookCovers/${singleBook.id}.png" class="largePicture">
+      <div class="col">
       <h3 class="title">${singleBook.title}</h3>
       <p class="author">Author: ${singleBook.author} </p>
       <p class="description">Description: ${singleBook.description}</p>
@@ -43,11 +43,12 @@ export function getBookInfo(books, id) {
 function reloadLibrary() {
   let libraryhtml = `
     <div class="featuredBooks"></div>
-      <h2>Library</h2>
-    <div class="filters"></div>
-    <div class="sortingOptions"></div>
-    <div class="bookList"></div>
-  </main >`
+    <div class="library">
+      <h1>Library</h1>
+      <div class="filters"></div>
+      <div class="sortingOptions"></div>
+      <div class="bookList"></div>
+    </div>`
 
   document.querySelector('main').innerHTML = libraryhtml
   start()

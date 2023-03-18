@@ -1,4 +1,4 @@
-import '../style.css'
+import '../shoppingCart.css'
 import { getBookInfo } from './singleBook'
 
 let cart = []
@@ -81,6 +81,8 @@ function removeItem(id) {
     }
   })
   displayCartItems()
+  document.getElementById('itemCount').innerHTML = `
+  <span id="itemCount">${getItemCount()}</span>`
 }
 
 
@@ -100,12 +102,14 @@ function displayCartItems() {
       `
     <div class="bookRow" id=${id}>
     <img src="/imgs/bookCovers/${id}.png" class="cartPicture">
+    <div class="cart">
       <h3>${title}</h3>
       <div id=${id} class="quantity"> Quantity: ${quantity} </p> 
        <p id="price"><span>Price: </span>${price} SEK</p>
        <p id="rowPrice">Subtotal: ${price * quantity} </p>
        <button class="removeBtn" id=${id}> Remove </button> 
        <br></br> 
+       </div>
     </div>
   `)
 

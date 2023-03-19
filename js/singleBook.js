@@ -7,9 +7,11 @@ export function displaySingleBook(books, id) {
   /* let currentBook = books.filter(book => book.id === parseInt(id))
   let singleBook = currentBook[0] */
   let singleBookHtml =
-    `<div class="row">
+    `
+    <div class="container">
+    <div class="row">
       <img src="/imgs/bookCovers/${singleBook.id}.png" class="largePicture">
-      <div class="col">
+      <div class="col-xl">
       <h3 class="title">${singleBook.title}</h3>
       <p class="author">Author: ${singleBook.author} </p>
       <p class="description">Description: ${singleBook.description}</p>
@@ -17,6 +19,7 @@ export function displaySingleBook(books, id) {
       <p class="price">Price: ${singleBook.price}</p>
       <button class="cartBtn">Add to Cart</button>
        <button class="backBtn" id="backBtn">Back to Library</button>
+    </div>
     </div>
   </div>`
   document.querySelector('main').innerHTML = singleBookHtml

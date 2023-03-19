@@ -109,13 +109,6 @@ function addFilters() {
     </label>
   `;
 
-  /* <label><span>Filter by category:</span>
-      <select class="categoryFilter">
-        <option>all</option>
-        ${categories.map(category => `<option>${category}</option>`).join('')}
-      </select>
-    </label> */
-  // add an event listener
   document.querySelector('.chooseFilter').addEventListener(
     'change',
     event => {
@@ -142,7 +135,6 @@ function applyFilters(chosenFilter) {
     document.querySelector('.authorFilter').addEventListener(
       'change',
       event => {
-        // get the selected hobby
         chosenAuthorFilter = event.target.value;
         console.log(chosenAuthorFilter)
         filteredBooks = books.filter(
@@ -155,6 +147,25 @@ function applyFilters(chosenFilter) {
   }
 
   if (chosenFilter === 'Price Interval') {
+    document.querySelector('.chosenFilter').innerHTML = `
+    <label><span>Filter by Price Interval:</span>
+      <select class="priceFilter">
+        <option>all</option>
+         <option> 0 - 500 SEK</option>
+         <option> 500 - 1000 SEK</option>
+         <option>  > 1000 SEK</option>
+      </select>
+    </label>
+  `
+    document.querySelector('.priceFilter').addEventListener(
+      'change',
+      event => {
+        chosenPriceFilter = event.target.value;
+        console.log(chosenPriceFilter)
+        filteredBooks = applyPriceFilter(chosenPriceFilter)
+        displayBooks();
+      }
+    )
     console.log('price interval was selected')
   }
 
@@ -180,6 +191,35 @@ function applyFilters(chosenFilter) {
       }
     )
   }
+}
+
+function applyPriceFilter(priceRange) {
+  let filteredPrices = []
+  console.log(priceRange)
+  if (priceRange == '0 - 500 SEK') {
+    console.log("enter if statement")
+    books.forEach((book => {
+      if (parseInt(book.price) < 500) {
+        filteredPrices.push(book)
+      }
+    }))
+  }
+  if (priceRange == '500 - 1000 SEK') {
+    books.forEach((book => {
+      if (parseInt(book.price) > 500 && book.price < 1000) {
+        filteredPrices.push(book)
+      }
+    }))
+  }
+  if (priceRange == '> 1000 SEK') {
+    books.forEach((book => {
+      if (parseInt(book.price) > 1000) {
+        filteredPrices.push(book)
+      }
+    }))
+  }
+  console.log(filteredPrices)
+  return filteredPrices
 }
 
 function displayBooks() {

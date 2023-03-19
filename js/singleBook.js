@@ -46,6 +46,7 @@ function reloadLibrary() {
     <div class="library">
       <h1>Library</h1>
       <div class="filters"></div>
+      <div class ="chosenFilter"></div>
       <div class="sortingOptions"></div>
       <div class="bookList"></div>
     </div>`

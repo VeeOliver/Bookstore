@@ -8,6 +8,7 @@ export async function start() {
   books = await getJSON('./json/books.json');
   showFeaturedBooks();
   getCategories();
+  getAuthors();
   addFilters();
   addSortingOptions();
   sortByTitleAtoZ(books);
@@ -20,8 +21,12 @@ export async function start() {
 let books,
   chosenFilter = 'all',
   chosenCategoryFilter = 'all',
+  chosenAuthorFilter = 'all',
+  chosenPriceFilter = 'all',
   chosenSortOption,
-  categories = []
+  categories = [],
+  authors = [],
+  filteredBooks = []
 
 function sortByAuthorAtoZ(books) {
   books.sort(({ author: aAuthor }, { author: bAuthor }) =>
@@ -77,12 +82,18 @@ function addSortingOptions() {
 
 function getCategories() {
   // create an array of all book categories
-  let withDuplicates = books.map(book => book.category);
+  let withDuplicates = books.map(book => book.category)
   // remove duplicates by creating a set
   // that we then spread into an array to cast it to an array
-  categories = [...new Set(withDuplicates)];
+  categories = [...new Set(withDuplicates)]
   // sort the categories
-  categories.sort();
+  categories.sort()
+}
+
+function getAuthors() {
+  let withDuplicates = books.map(book => book.author)
+  authors = [...new Set(withDuplicates)]
+  authors.sort()
 }
 
 function addFilters() {
@@ -92,8 +103,8 @@ function addFilters() {
       <select class="chooseFilter">
         <option>all</option>
         <option>Author</option>
-        <option>Price Interval</option>
         <option>Category</option>
+        <option>Price Interval</option>
       </select>
     </label>
   `;
@@ -120,6 +131,27 @@ function addFilters() {
 function applyFilters(chosenFilter) {
   if (chosenFilter === 'Author') {
     console.log('author was selected')
+    document.querySelector('.chosenFilter').innerHTML = `
+    <label><span>Filter by Author:</span>
+      <select class="authorFilter">
+        <option>all</option>
+        ${authors.map(author => `<option>${author}</option>`).join('')}
+      </select>
+    </label>
+  `
+    document.querySelector('.authorFilter').addEventListener(
+      'change',
+      event => {
+        // get the selected hobby
+        chosenAuthorFilter = event.target.value;
+        console.log(chosenAuthorFilter)
+        filteredBooks = books.filter(
+          ({ author }) => chosenAuthorFilter === 'all'
+            || chosenAuthorFilter === author
+        )
+        displayBooks();
+      }
+    )
   }
 
   if (chosenFilter === 'Price Interval') {
@@ -127,7 +159,7 @@ function applyFilters(chosenFilter) {
   }
 
   if (chosenFilter === 'Category') {
-    document.querySelector('.filters').innerHTML = `
+    document.querySelector('.chosenFilter').innerHTML = `
     <label><span>Filter by category:</span>
       <select class="categoryFilter">
         <option>all</option>
@@ -140,6 +172,10 @@ function applyFilters(chosenFilter) {
       event => {
         // get the selected hobby
         chosenCategoryFilter = event.target.value;
+        filteredBooks = books.filter(
+          ({ category }) => chosenCategoryFilter === 'all'
+            || chosenCategoryFilter === category
+        )
         displayBooks();
       }
     )
@@ -148,10 +184,10 @@ function applyFilters(chosenFilter) {
 
 function displayBooks() {
   // filter according to category and call displayBooks
-  let filteredBooks = books.filter(
-    ({ category }) => chosenCategoryFilter === 'all'
-      || chosenCategoryFilter === category
-  );
+  if (filteredBooks.length < 1) {
+    filteredBooks = books
+  }
+
   if (chosenSortOption === '--Unsorted--') { filteredBooks = books }
   if (chosenSortOption === 'Author (A-Z)') { sortByAuthorAtoZ(filteredBooks); }
   if (chosenSortOption === 'Author (Z-A)') { sortByAuthorZtoA(filteredBooks); }

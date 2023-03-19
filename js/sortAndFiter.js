@@ -1,4 +1,3 @@
-import { Button } from 'bootstrap';
 import '../style.css'
 import { getJSON } from './utils/getJSON';
 import { showFeaturedBooks } from './featuredBooks';
@@ -19,6 +18,7 @@ export async function start() {
 }
 
 let books,
+  chosenFilter = 'all',
   chosenCategoryFilter = 'all',
   chosenSortOption,
   categories = []
@@ -88,24 +88,63 @@ function getCategories() {
 function addFilters() {
   // create and display html
   document.querySelector('.filters').innerHTML = `
+    <label><span>Filter by:</span>
+      <select class="chooseFilter">
+        <option>all</option>
+        <option>Author</option>
+        <option>Price Interval</option>
+        <option>Category</option>
+      </select>
+    </label>
+  `;
+
+  /* <label><span>Filter by category:</span>
+      <select class="categoryFilter">
+        <option>all</option>
+        ${categories.map(category => `<option>${category}</option>`).join('')}
+      </select>
+    </label> */
+  // add an event listener
+  document.querySelector('.chooseFilter').addEventListener(
+    'change',
+    event => {
+      // get the selected hobby
+      chosenFilter = event.target.value;
+      applyFilters(chosenFilter)
+      console.log(chosenFilter)
+      //displayBooks();
+    }
+  );
+}
+
+function applyFilters(chosenFilter) {
+  if (chosenFilter === 'Author') {
+    console.log('author was selected')
+  }
+
+  if (chosenFilter === 'Price Interval') {
+    console.log('price interval was selected')
+  }
+
+  if (chosenFilter === 'Category') {
+    document.querySelector('.filters').innerHTML = `
     <label><span>Filter by category:</span>
       <select class="categoryFilter">
         <option>all</option>
         ${categories.map(category => `<option>${category}</option>`).join('')}
       </select>
     </label>
-  `;
-  // add an event listener
-  document.querySelector('.categoryFilter').addEventListener(
-    'change',
-    event => {
-      // get the selected hobby
-      chosenCategoryFilter = event.target.value;
-      displayBooks();
-    }
-  );
+  `
+    document.querySelector('.categoryFilter').addEventListener(
+      'change',
+      event => {
+        // get the selected hobby
+        chosenCategoryFilter = event.target.value;
+        displayBooks();
+      }
+    )
+  }
 }
-
 
 function displayBooks() {
   // filter according to category and call displayBooks

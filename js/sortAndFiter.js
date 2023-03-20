@@ -4,6 +4,7 @@ import { showFeaturedBooks } from './featuredBooks';
 import { displaySingleBook } from './singleBook';
 import { addToCart } from './shoppingCart';
 
+//call all functions to load the library 
 export async function start() {
   books = await getJSON('./json/books.json');
   showFeaturedBooks();
@@ -28,38 +29,41 @@ let books,
   authors = [],
   filteredBooks = []
 
+//sorts books alphabetically by author
 function sortByAuthorAtoZ(books) {
   books.sort(({ author: aAuthor }, { author: bAuthor }) =>
     aAuthor > bAuthor ? 1 : -1);
 }
 
+//sort books opposite by author
 function sortByAuthorZtoA(books) {
   books.sort(({ author: aAuthor }, { author: bAuthor }) =>
     aAuthor < bAuthor ? 1 : -1);
 }
 
+//sort books alphabetially by title 
 function sortByTitleAtoZ(books) {
   books.sort(({ title: aAuthor }, { title: bAuthor }) =>
     aAuthor > bAuthor ? 1 : -1);
 }
-
+//sorts opposite by title 
 function sortByTitleZtoA(books) {
   books.sort(({ title: aAuthor }, { title: bAuthor }) =>
     aAuthor < bAuthor ? 1 : -1);
 }
-
+//sorts by ascending price
 function sortByPriceAsc(books) {
   books.sort(({ price: aPrice }, { price: bPrice }) =>
     aPrice > bPrice ? 1 : -1);
 }
-
+//sorts by descending price
 function sortByPriceDes(books) {
   books.sort(({ price: aPrice }, { price: bPrice }) =>
     aPrice < bPrice ? 1 : -1);
 }
 
 function addSortingOptions() {
-  // create and display html
+  // create and display options
   document.querySelector('.sortingOptions').innerHTML = `
     <label><span>Sort by:</span>
       <select class="sortOption">
@@ -73,7 +77,7 @@ function addSortingOptions() {
       </select>
     </label>
   `;
-  // add an event listener
+
   document.querySelector('.sortOption').addEventListener('change', event => {
     chosenSortOption = event.target.value;
     displayBooks();
@@ -81,23 +85,23 @@ function addSortingOptions() {
 }
 
 function getCategories() {
-  // create an array of all book categories
+  //get an array with all possible categories
   let withDuplicates = books.map(book => book.category)
   // remove duplicates by creating a set
-  // that we then spread into an array to cast it to an array
   categories = [...new Set(withDuplicates)]
-  // sort the categories
+
   categories.sort()
 }
 
 function getAuthors() {
+  //do the same array function with authors
   let withDuplicates = books.map(book => book.author)
   authors = [...new Set(withDuplicates)]
   authors.sort()
 }
 
 function addFilters() {
-  // create and display html
+  // create filter options
   document.querySelector('.filters').innerHTML = `
     <label><span>Filter by:</span>
       <select class="chooseFilter">
@@ -122,6 +126,7 @@ function addFilters() {
 }
 
 function applyFilters(chosenFilter) {
+  //depending on the filter option, assign the filteredBooks array to the correct filter options
   if (chosenFilter === 'Author') {
     console.log('author was selected')
     document.querySelector('.chosenFilter').innerHTML = `
@@ -194,6 +199,7 @@ function applyFilters(chosenFilter) {
 }
 
 function applyPriceFilter(priceRange) {
+  //helper method to determine which price interval will be loaded into the array 
   let filteredPrices = []
   console.log(priceRange)
   if (priceRange == '0 - 500 SEK') {
@@ -221,7 +227,7 @@ function applyPriceFilter(priceRange) {
 }
 
 function displayBooks() {
-  // filter according to category and call displayBooks
+  // filter according to filter options and call displayBooks
   if (filteredBooks.length < 1) {
     filteredBooks = books
   }
@@ -248,7 +254,6 @@ function displayBooks() {
   `);
 
   document.querySelector('.bookList').innerHTML = htmlArray.join('')
-  //add event listener 
 
   document.querySelectorAll(`.infoBtn`).forEach(btn => {
     btn.addEventListener('click', e => {

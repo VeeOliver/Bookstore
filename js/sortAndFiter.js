@@ -197,7 +197,6 @@ function applyPriceFilter(priceRange) {
   let filteredPrices = []
   console.log(priceRange)
   if (priceRange == '0 - 500 SEK') {
-    console.log("enter if statement")
     books.forEach((book => {
       if (parseInt(book.price) < 500) {
         filteredPrices.push(book)
@@ -218,7 +217,6 @@ function applyPriceFilter(priceRange) {
       }
     }))
   }
-  console.log(filteredPrices)
   return filteredPrices
 }
 

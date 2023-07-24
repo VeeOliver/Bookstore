@@ -4,6 +4,7 @@ import { getBookInfo } from './singleBook'
 let cart = []
 let total
 
+//add book to the cart
 export function addToCart(books, id) {
   let addedBook = getBookInfo(books, id)
   if (bookExists(id) === 0) {
@@ -19,6 +20,7 @@ export function addToCart(books, id) {
     increaseQuantity(id)
   }
 
+  //change the number of items in the cart to reflect on the navbar 
   displayCartItems()
   document.getElementById('itemCount').innerHTML = `
   <span id="itemCount">${getItemCount()}</span>`
@@ -26,6 +28,7 @@ export function addToCart(books, id) {
   calculateTotals()
 }
 
+//calculate totals for all books
 function calculateTotals() {
   total = 0
   cart.forEach(item => {
@@ -35,6 +38,7 @@ function calculateTotals() {
 
 }
 
+//check to see if a book is already in the cart
 function bookExists(id) {
   let flag = 0
   cart.forEach(item => {
@@ -45,6 +49,7 @@ function bookExists(id) {
   return flag
 }
 
+// update the quantity of a book in the cart 
 function increaseQuantity(id) {
   cart.forEach(item => {
     if (item.id === parseInt(id)) {
@@ -54,7 +59,7 @@ function increaseQuantity(id) {
   })
 }
 
-
+//check the quantity each book in the cart 
 function getItemCount() {
   let totalItems = 0
   cart.forEach(item => {
@@ -63,11 +68,10 @@ function getItemCount() {
   return totalItems
 }
 
+//delete a book object from the cart array
 function removeItem(id) {
-  console.log('we are in the remove items function')
   let index = 0
   cart.forEach(item => {
-    console.log(item.id, 'and the param id is ', parseInt(id))
     if (item.id === parseInt(id)) {
       if (item.quantity === 1) {
         cart.splice(index, 1)
@@ -75,8 +79,6 @@ function removeItem(id) {
       if (item.quantity > 1) {
         item.quantity -= 1
       }
-      console.log('now we are in if statement ', item.quantity)
-
       index += 1
     }
   })
@@ -85,7 +87,7 @@ function removeItem(id) {
   <span id="itemCount">${getItemCount()}</span>`
 }
 
-
+//create html for inside the shopping cart modal
 function displayCartItems() {
   total = calculateTotals()
   let htmlArray

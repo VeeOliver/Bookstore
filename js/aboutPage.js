@@ -1,5 +1,5 @@
 import '../style.css'
-
+//load  gerneic about page 
 export function loadAboutPage() {
   document.querySelector('main').innerHTML =
     `<div class="aboutPage">

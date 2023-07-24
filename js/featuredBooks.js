@@ -1,6 +1,7 @@
 
 import '../style.css'
 
+//create a featured books carousel to put on the front page 
 export function showFeaturedBooks() {
   document.querySelector('.featuredBooks').innerHTML =
     `<h1 class="homeText"><span class="newKeyword">New</span> from the Vault: The Beginners Series</h1>

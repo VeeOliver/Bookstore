@@ -2,10 +2,9 @@ import '../style.css'
 import { start } from './sortAndFiter'
 import { addToCart } from './shoppingCart'
 
+//html for the dingle book display
 export function displaySingleBook(books, id) {
   let singleBook = getBookInfo(books, id)
-  /* let currentBook = books.filter(book => book.id === parseInt(id))
-  let singleBook = currentBook[0] */
   let singleBookHtml =
     `
     <div class="container">
@@ -32,17 +31,16 @@ export function displaySingleBook(books, id) {
     addToCart(books, id)
   })
 
-
-
 }
 
+//gets the information for the selected book 
 export function getBookInfo(books, id) {
   let currentBook = books.filter(book => book.id === parseInt(id))
   let singleBook = currentBook[0]
   return singleBook
 }
 
-
+//roloads neccisary html for the back to library button 
 function reloadLibrary() {
   let libraryhtml = `
     <div class="featuredBooks"></div>
